@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catur Arena</title>
+    <link rel="stylesheet" href="indexstyle.css">
+    <style>
+        /* Tambahkan gaya untuk menu kontak */
+        .contact-info {
+            display: none; /* Default disembunyikan */
+            margin-top: 10px;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Catur Arena</div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li>
+                        <a href="#" id="contact-btn">Kontak</a>
+                        <div class="contact-info" id="contact-info">
+                            Hubungi kami di: <br> +62-812-3456-7890
+                        </div>
+                    </li>
+                    <li><button class="login-btn" onclick="location.href='login.html'">Login</button></li>
+                    <li><button class="signup-btn" onclick="location.href='signup.html'">Sign Up</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="content">
+            <h1>TURNAMEN CATUR NASIONAL</h1>
+            <p>Bergabunglah dalam turnamen catur nasional yang akan diadakan di berbagai kota besar Indonesia! Kompetisi ini terbuka untuk pemain junior, senior, dan kategori umum. Nikmati persaingan seru dan tunjukkan kemampuan strategis Anda di arena catur.</p>
+            <button onclick="location.href='info.html'">More Info</button>
+        </div>
+        <div class="illustration">
+            <img src="main-catur.png" alt="Illustration">
+        </div>
+    </main>
+    <script>
+        // Tangani klik menu kontak
+        document.getElementById('contact-btn').addEventListener('click', function (event) {
+            event.preventDefault(); // Mencegah aksi default (navigasi)
+
+            // Toggle tampilan informasi kontak
+            const contactInfo = document.getElementById('contact-info');
+            if (contactInfo.style.display === 'none' || contactInfo.style.display === '') {
+                contactInfo.style.display = 'block';
+            } else {
+                contactInfo.style.display = 'none';
+            }
+        });
+    </script>    
+</body>
+</html>

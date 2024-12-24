@@ -1,0 +1,180 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #ffe0f0, #ff97d9); /* Gradasi pink */
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 10px 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ea0085;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ea0085;
+}
+
+/* Informasi Kontak Pop-up */
+.contact-info {
+    display: none;
+    position: absolute;
+    top: 100%; /* Muncul tepat di bawah menu */
+    left: 0;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+nav ul li:hover .contact-info {
+    display: block;
+}
+
+/* Tombol Login dan Sign Up */
+nav ul li button {
+    background-color: #ea0085;
+    color: #ffffff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav ul li button:hover {
+    background-color: #d10078;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Bagian Utama */
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 40px;
+}
+
+.content {
+    max-width: 50%;
+}
+
+.content h1 {
+    font-size: 48px;
+    color: #ea0085;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.content button {
+    background-color: #ea0085;
+    color: #ffffff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.content button:hover {
+    background-color: #d10078;
+    transform: translateY(-3px); /* Efek naik saat dihover */
+}
+
+.illustration {
+    width: 50%;
+    text-align: center;
+}
+
+.illustration img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px; /* Membuat gambar lebih lembut */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    main {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .content, .illustration {
+        max-width: 100%;
+    }
+
+    .content h1 {
+        font-size: 36px;
+    }
+
+    .content button {
+        padding: 10px 20px;
+    }
+
+    .illustration img {
+        max-width: 300px;
+    }
+}
